@@ -1,59 +1,49 @@
 <?php
-$num = 10;
-if ($num > 5) {
-    var_dump('Bigger then 5');
-} elseif ($num === 5){
-var_dump('Equal to 5');
-} else {
-    var_dump('Smaller then 5');
+
+for($i=0; $i<10; $i++){
+    var_dump($i);
 }
 
-$day = (int) date('N', strtotime('07.09.2025'));
-var_dump($day);
-
-if ($day == 1){
-    var_dump ('Esmaspäev');
-}else if ($day == 1){
-    var_dump ('Teisipäev');
-}
-else if ($day == 1){
-    var_dump ('Kolmapäev');
-}
-else if ($day == 1){
-    var_dump ('neljapäev');
-}
-else if ($day == 1){
-    var_dump ('Reede');
-}
-else if ($day == 1){
-    var_dump ('Laupäev');
-}
-else if ($day == 1){
-    var_dump ('Pühapäev');
+for($i=10; $i>0; $i--){
+    var_dump($i);
 }
 
-switch($day){
-    case 1:
-        var_dump ('Esmaspäev');
-    case 2:
-        var_dump ('Teisipäev');
-    case 3:
-        var_dump ('Kolmapäev');
-    case 4:
-        var_dump ('neljapäev');
-    case 5:
-        var_dump ('Reede');
-    case 6:
-        var_dump ('Laupäev');
-    case 7:
-        var_dump ('Pühapäev');
-
+for($i=1; $i<1000000; $i*=2){
+    var_dump($i);
 }
 
+$current = date("s");
 
+// while($current<59){
+//     var_dump($current);
+//     $current = (int) date("s");
+// }
 
+$i = 10;
 
+while($i<10){
+    var_dump('While');
+}
 
+do{
+    var_dump('Do While');
+} while($i<10);
+
+$array = ['apples', 'oranges', 'pears'];
+
+foreach($array as $value) {
+    var_dump($value);
+}
+
+$array = [
+    'name' => 'Tristan',
+    'age' => 18,
+    'isMale' => true,
+];
+
+foreach($array as $key => $value) {
+    var_dump($key, $value);
+}
 
 
 
